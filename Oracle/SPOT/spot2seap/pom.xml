@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- =========================================================================================================== -->
+    <!-- Project Information -->
+
+    <groupId>edu.utexas.ece.mpc</groupId>
+    <artifactId>spot2seap</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+
+    <name>Spot to Seap</name>
+    <description>Send spot sensor reading to SEAP server</description>
+    <url>http://mpc.ece.utexas.edu/seap/examples/spot2seap</url>
+    <inceptionYear>2007</inceptionYear>
+
+    <parent>
+        <groupId>edu.utexas.ece.mpc</groupId>
+        <artifactId>seap-user-study</artifactId>
+        <version>1.0</version>
+    </parent>
+
+</project>

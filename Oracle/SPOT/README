@@ -1,0 +1,51 @@
+SEEU
+Seth Holloway (seth@sethholloway.com)
+Christine Julien (c.julien@mail.utexas.edu)
+Mobile and Pervasive Computing Group (http://mpc.ece.utexas.edu/)
+Electrical and Computer Engineer (http://www.ece.utexas.edu)
+The University of Texas at Austin (http://www.utexas.edu)
+
+This demo requires a web application (written Ruby on Rails) and multiple Sun SPOTs (running Java).
+Deploy the SEAP application to the web application server.
+One SPOT is used as a basestation (HTTP proxy); other SPOTs server as sensors and actuators.
+
+==Sensors==
+Thermometer: http://localhost:3000/sensors/1/
+Light: http://localhost:3000/sensors/2/
+Tilt X: http://localhost:3000/sensors/3/
+
+==Actuators==
+Thermometer: http://localhost:3000/actuators/1/
+Alarm: http://localhost:3000/actuators/2/
+Fan: http://localhost:3000/actuators/3/
+
+STEPS NECESSARY FOR THE DEMO
+Download SPOT source from SVN
+--svn co https://username@frisbee.ece.utexas.edu/svn/seap/trunk/seeu/
+Download web server source from Git
+-From the terminal
+--git clone https://smholloway@github.com/smholloway/SEEU.git
+
+Start the web application
+--cd seeu
+--rails s
+--Verify that the server is running at http://localhost:3000/
+
+Configure the basestation SPOT
+-Connect the SPOT via USB
+--cd seap-user-study/spot2bot
+--ant socket-proxy-gui
+---A swing GUI will launch
+---Select the "I/O" checkbox in the top right
+---Press "Start"
+
+Configure the other SPOTs
+-Connect the SPOT via USB
+--Change directory into the device you want to emulate
+--ant info
+----Instructions will scroll through the terminal
+----Choose the SPOT
+----Allow the commands to complete, then press the reset button on the SPOT
+--ant deploy run
+----Allow the commands to complete, then press the reset button on the SPOT
+
