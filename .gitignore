@@ -11,6 +11,7 @@ log*.txt
 *.tmp
 tmp/**/*
 db/*.sqlite3
+.svn*
 
 *.class
 .classpath
